@@ -136,9 +136,29 @@ body {
   gap: 0.5rem;
 }
 
-.task {
+.task-item-container {
+  display: flex;
+  flex-direction: row;
   background-color: gainsboro;
   color: #414040;
   border-radius: 5px;
+  justify-content: space-between;
+}
+
+.task-title {
   padding: 0.5rem;
+}
+
+.delete-task-button {
+  display: none;
+  width: 20%;
+  background-color: #f13f3f;
+  border-radius: 5px;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem;
+}
+
+.task-item-container:hover .delete-task-button {
+  display: block;
 }

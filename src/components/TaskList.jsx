@@ -1,12 +1,25 @@
 import { useSelector } from 'react-redux';
+import { useDispatch } from "react-redux";
+import { TaskItem } from "../components/TaskItem"
+import { deleteTask } from "../redux/tasks"
 
 export const TaskList = () => {
     const tasks = useSelector((state) => state.tasks);
 
+    const dispatch = useDispatch();
+
+    const handleClick = (id) => {
+        dispatch(
+			deleteTask({
+				id: id
+			})
+		)
+    }
+
     return (
-        <ul class="task-list">
+        <ul className="task-list">
             {tasks.map((task) => (
-                <li className="task" key={task.id}>{task.text}</li>
+                <TaskItem key={task.id} text={task.text} id={task.id} onClick={(id) => handleClick(id)}/>
             ))}
         </ul>
     );

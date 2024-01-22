@@ -10,39 +10,36 @@ export const AddTask = () => {
     const onSubmit = (event) => {
         event.preventDefault();
 
-        console.log('submit')
-
-        if(value.trim().length === 0)
-		{
-			alert("Enter a task before adding !!");
-			setValue("");
-			return;
-		}
+        if (value.trim().length === 0) {
+            alert("Enter a task before adding !!");
+            setValue("");
+            return;
+        }
 
         dispatch(
-			addTask({
-				task: value,
+            addTask({
+                task: value,
                 completed: false,
-			})
-		);
+            })
+        );
 
-		setValue("");
+        setValue("");
 
     }
 
     return (
         <div className="add-task-container">
             <input
-				type="text"
-				className="task-input"
-				placeholder="Add a task"
-				value={value}
-				onChange={(event) => setValue(event.target.value)}
-			></input>
+                type="text"
+                className="task-input"
+                placeholder="Add a task"
+                value={value}
+                onChange={(event) => setValue(event.target.value)}
+            ></input>
 
-			<button className="add-task-button" onClick={onSubmit}>
-				Save
-			</button>
+            <button className="add-task-button" onClick={onSubmit}>
+                Save
+            </button>
         </div>
     )
 }

@@ -7,14 +7,14 @@ reducers: {
     addTask: (state, action) => {
         console.log('add a task')
         const newTask = {
-            id: new Date(),
+            id: Date.now(),
             text: action.payload.task,
             completed: action.payload.completed,
         }
         state.push(newTask);
     },
     deleteTask: (state, action) => {
-        console.log('deleta a task')
+        return state.filter((item) => item.id !== action.payload.id);
     }
 }
 })
