@@ -18,4 +18,8 @@ Describe how you approached to problem, and what tools and techniques you used t
 
 ## View it live
 
-Every project should be deployed somewhere. Be sure to include the link to the deployed project so that the viewer can click around and see what it's all about.
+Coming soon...
+
+# Tools and help
+
+https://dev.to/arunavamodak/make-a-simple-todo-app-using-react-and-reduxtoolkit-2d4i
