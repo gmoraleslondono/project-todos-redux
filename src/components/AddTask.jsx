@@ -7,6 +7,10 @@ export const AddTask = () => {
 
     const dispatch = useDispatch();
 
+    const handleInputChange = (event) => {
+        setValue(event.target.value)
+    }
+
     const onSubmit = (event) => {
         event.preventDefault();
 
@@ -34,8 +38,8 @@ export const AddTask = () => {
                 className="task-input"
                 placeholder="Add a task"
                 value={value}
-                onChange={(event) => setValue(event.target.value)}
-            ></input>
+                onChange={handleInputChange}
+            />
 
             <button className="add-task-button" onClick={onSubmit}>
                 Save
