@@ -10,10 +10,6 @@
 
 - Apply ESLint: `npm run lint`
 
-### Type Checking
-
-- Run TypeScript: `npm run typecheck`
-
 ### Build
 
 - Build the project: `npm run build`
