@@ -1,20 +1,23 @@
-# Technigo React Starter App
+# Todo List App: JavaScript to TypeScript
 
-## Usage
+## How to Use
 
-1. Fork and clone this repository to your computer
-2. Install required dependencies with npm: `npm install`
-3. Start the project: `npm run dev`
+### Development
 
-# Project Todos
+- Start the project: `npm run dev`
 
-Replace this readme with your own information about your project.
+### Linting
 
-Start by briefly describing the assignment in a sentence or two. Keep it short and to the point.
+- Apply ESLint: `npm run lint`
 
-## The problem
+### Type Checking
 
-Describe how you approached to problem, and what tools and techniques you used to solve it. How did you plan? What technologies did you use? If you had more time, what would be next?
+- Run TypeScript: `npm run typecheck`
+
+### Build
+
+- Build the project: `npm run build`
+- Preview the result: `npm run preview`
 
 ## View it live
 
