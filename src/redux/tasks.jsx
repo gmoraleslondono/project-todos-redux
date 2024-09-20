@@ -1,6 +1,6 @@
 import { createSlice } from '@reduxjs/toolkit'
 
-export const tasks = createSlice({
+export const tasksSlice = createSlice({
 name: 'tasks',
 initialState: [],
 reducers: {
@@ -14,7 +14,7 @@ reducers: {
         state.push(newTask);
     },
     deleteTask: (state, action) => {
-        return state.filter((item) => item.id !== action.payload.id);
+        return state.filter((task) => task.id !== action.payload.id);
     }
 }
 })
